@@ -11,6 +11,7 @@
 		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 		foreach(new RecursiveIteratorIterator(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
 				echo '<div class="artists rounded float-left col-12 col-lg-6"><img class="img-fluid" src="/images/artists/' . $v . '" alt=""></div>';
+				
 		}
 	}
 	catch(PDOException $e) {
