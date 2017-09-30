@@ -7,19 +7,19 @@
         <div class="navbar-collapse collapse" id="navbar10">
             <ul class="navbar-nav nav-fill w-100 align-items-start">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Venues</a>
+                    <a class="nav-link" href="/venues">Venues</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Artists</a>
+                    <a class="nav-link" href="/artists">Artists</a>
                 </li>
                 <li class="nav-item hidden-md-down">
                     <h5 class="my-0"><a class="nav-link" href="/">Underground Miami</a></h5>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Graffiti</a>
+                    <a class="nav-link" href="/graffiti">Graffiti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shows</a>
+                    <a class="nav-link" href="/shows">Shows</a>
                 </li>
             </ul>
         </div>
