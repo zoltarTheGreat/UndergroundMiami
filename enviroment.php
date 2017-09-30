@@ -1,9 +1,0 @@
-<?php
-$DATABASE_HOSTNAME_ADDRESS="homestead.app";
-$DATABASE_PORT="3306";
-
-$DATABASE_NAME="undermiami";
-
-$DATABASE_USER="";
-$DATABASE_PASSWORD="";
-?>
