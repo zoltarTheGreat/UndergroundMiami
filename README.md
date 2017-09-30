@@ -9,9 +9,9 @@ CREATE TABLE `undermiami`.`venues` (
  `name` TEXT NOT NULL ,
  `lat` DOUBLE NOT NULL ,
  `lon` DOUBLE NOT NULL ,
- `addr` CHAR NULL DEFAULT NULL ,
+ `addr` TEXT NULL DEFAULT NULL ,
  `desc` TEXT NULL DEFAULT NULL ,
- `social_link` CHAR NULL DEFAULT NULL ,
+ `social_link` TEXT NULL DEFAULT NULL ,
  `image` LONGTEXT NULL DEFAULT NULL ,
  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
  `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
@@ -22,8 +22,8 @@ CREATE TABLE `undermiami`.`venues` (
 CREATE TABLE `undermiami`.`artists` (
  `id` INT NOT NULL ,
  `name` TEXT NOT NULL ,
- `genre` CHAR NOT NULL ,
- `spotify_id` CHAR NOT NULL DEFAULT '0' ,
+ `genre` TEXT NOT NULL ,
+ `spotify_id` TEXT NULL DEFAULT NULL ,
  `links_set` TEXT NULL DEFAULT NULL ,
  `bio` TEXT NULL DEFAULT NULL ,
  `profile_pic` LONGTEXT NULL DEFAULT NULL ,
@@ -37,7 +37,7 @@ CREATE TABLE `undermiami`.`shows` (
  `id` INT NOT NULL ,
  `name` TEXT NOT NULL ,
  `artists_set` TEXT NOT NULL ,
- `venue` CHAR NOT NULL ,
+ `venue` TEXT NOT NULL ,
  `datetime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
  `links` TEXT NULL DEFAULT NULL ,
  `teaser` LONGTEXT NULL DEFAULT NULL ,
@@ -56,4 +56,7 @@ CREATE TABLE `undermiami`.`graffiti` (
  `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
  PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+INSERT INTO `graffiti` (`id`, `name`, `artists_set`, `photo`, `created_at`, `updated_at`) VALUES ('1', 'dfafds', 'dog', 'aaamoto.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO `artists` (`id`, `name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES ('1', 'Hometown Losers', 'Pop Punk', '0', 'https://www.facebook.com/hometownlosers/', 'hhasf', 'HTL.jpg 	', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 ```
