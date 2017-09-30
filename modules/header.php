@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/environment.php'); ?>
+<?php
+    require_once 'spotify.class.php';
+        
+    // Search for an artist by its name
+    $artist = Spotify::searchArtist('hometown losers');
+        
+    // Take a look at the response
+    echo '<pre>';
+    print_r($artist);
+    echo '<pre>';
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
