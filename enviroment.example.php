@@ -1,4 +1,4 @@
-<?php
+<?php // Save a copy of this file as enviroment.php and edit it there to meet your needs
 $DATABASE_HOSTNAME_ADDRESS="homestead.app"; // Name of the hostname address for the database server
 $DATABASE_PORT="3306";
 
