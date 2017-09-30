@@ -1,7 +1,7 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-    <div class="container">
+
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar10">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" style="align-self:right"></span>
         </button>
         <span class="navbar-brand hidden-lg-up">Underground Miami</span>
         <div class="navbar-collapse collapse" id="navbar10">
@@ -23,6 +23,6 @@
                 </li>
             </ul>
         </div>
-    </div>
+
 </nav>
 <br>

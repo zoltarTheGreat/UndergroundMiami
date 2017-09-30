@@ -9,16 +9,38 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
+/* Custom buttons */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
   background-color: #fff;
   border: .05rem solid #fff;
 }
+.btn-lit{
+  color: #ddd;
+  text-shadow: none;
+  background-color: #D5235B;
+  border: .05rem solid #D5235B;
+}
+.btn-lit:hover,
+.btn-lit:focus{
+  background: #FA427C;
+  border-color: #FA427C;
+}
 
+.btn-chill{
+  color: #ddd;
+  text-shadow: none;
+  background-color: #008dff;
+  border: .05rem solid #008dff;
+}
+.btn-chill:hover,
+.btn-chill:focus{
+  background: #5db6ff;
+  border-color: #5db6ff;
+}
 
 /*
  * Base structure
@@ -41,14 +63,37 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.2);
 }
 
+#map{
+  background: pink;
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+  height: 400px;
+}
+
 /*
  * Footer
  */
 
 .mastfoot {
   color: rgba(255,255,255,.5);
-  position: absolute;
-  bottom: 0px;
+  position: relative;
   width: 100%;
   text-align: center;
+  margin-top: 100px;
 }
+
+@media screen and (max-width: 767px)  {
+  .lead .btn-lg{
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+  }
+  .mastfoot{
+    margin-top: 200px;
+  }
+}
+
+/*.mobile{display: none}*/

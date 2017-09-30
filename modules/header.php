@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/enviroment.php'); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
