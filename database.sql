@@ -41,7 +41,7 @@ CREATE TABLE `artists`
   `id` int
 (11) NOT NULL,
   `name` text COLLATE utf8_unicode_ci NOT NULL,
-  `genre` text COLLATE utf8_unicode_ci NOT NULL,
+  `genre` text COLLATE utf8_unicode_ci NULL,
   `spotify_id` text COLLATE utf8_unicode_ci,
   `links_set` text COLLATE utf8_unicode_ci,
   `bio` text COLLATE utf8_unicode_ci,
@@ -56,10 +56,13 @@ UPDATE CURRENT_TIMESTAMP
 --
 
 INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
-(1, 'Hometown Losers', 'Pop Punk', '0', 'https://www.facebook.com/hometownlosers/', 'hhasf', 'HTL.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
+(1, 'Hometown Losers', 'Pop Punk', '5sjCP7vD1G4rVev1wolTci', 'https://www.facebook.com/hometownlosers/', 'Just a shitty punk band from the greater Miami area. William Ramirez(Vocals), Jose Posada(Guitar), Yardley Dominguez(Guitar), Alejandro Abad(Bass), JP Hernandez(Drums)', 'HTL.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
+INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
+(2, 'Toptier', 'Pop-Punk', '0E4c3bUl6xhYUlc854FN8O', 'https://www.facebook.com/TopTierFL/', 'We are TopTier. An exciting four piece Pop-Punk band from Miami, FL. We throw in classic elements of the pop-punk sound mixed in brilliantly with a touch of hardcore & metal. We’ll bring a show that will surely have you on your feet, singing, clapping and jumping to our good vibe music. TopTier is: Bryant (B-ry) Perez(Drums), Christopher Tamez(Bass/Vocals), Charlie Naranjo(Lead Guitar), Felix Maldonado(Rhythm Guitar/Vocals)', 'TT.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
+INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
+(3, 'Happy Hour', 'Post-Hardcore', '6vNQcK5GY7IHShnGWsS3iD','https://www.facebook.com/HHbandfl/', 'Experimental Post-Hardcore from South Florida. for fans of: Dance Gavin Dance, A Lot Like Birds, Hail The Sun, Sianvar, Good Tiger, and Secret Band. Nate Promkul(Vocals), Eric Hidalgo(Guitar/Vocals), Theodore William-Michael Senft(Guitar), Jacob Muniz(Bass), David Alfaro(Drums)','HH.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `graffiti`
 --
@@ -132,7 +135,7 @@ CREATE TABLE `venues` (
   `lat` double NOT NULL,
   `lon` double NOT NULL,
   `addr` text COLLATE utf8_unicode_ci,
-  `desc` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci,
   `social_link` text COLLATE utf8_unicode_ci,
   `image` longtext COLLATE utf8_unicode_ci,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -143,11 +146,11 @@ CREATE TABLE `venues` (
 -- Dumping data for table `venues`
 --
 
-INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
+INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
 (1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http: //www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
-INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
+INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
 (2, 'Vickeys @ FIU', 25.7596208, -80.37439180000001, '10975 SW 17th St, Miami, FL 33165', 'A Vickets Bakery on campus. Eat and chill. Good food and relazing enviornemnt.', 'https://shop.fiu.edu/restaurants/vickycafe/index.html', 'VFIU.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
-INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
+INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
 (3, 'OMalleys Sports Bar', 26.2469165, -80.20110239999997, '1406 SR 7, Margate, FL 33063','Easygoing pub with TVs, hearty bar fare & many types of beer, plus pool, bands & karaoke nights.' , 'https://www.omalleyssportsbar.com/', 'OM.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
 
 

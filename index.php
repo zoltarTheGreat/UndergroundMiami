@@ -47,7 +47,7 @@
 		// set the resulting array to associative
 		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 		foreach ($stmt as $key => $value) {
-			echo '<div class="artists float-left col-6 col-lg-4 card">';
+			echo 'var markprops = { coords:{lat: ' . $value["lat"] . ;
 			echo '<div class="outy"><div><span class="artist-info">';
 			echo '<center><b>' . $value["name"] . "</b></center><br>";
 			echo '</span></div></div>';
@@ -59,8 +59,8 @@
 
 
 
-      addMarker(coord{lat: 25.7596208, lng:-80.37439180000001});
-      addMarker({lat: 26.2469165, lng:-80.20110239999997});
+      addMarker(coords:{lat: 25.7596208, lng:-80.37439180000001});
+      addMarker(coords:{lat: 26.2469165, lng:-80.20110239999997});
 
     //AddMarker Function
     function addMarker(props){
