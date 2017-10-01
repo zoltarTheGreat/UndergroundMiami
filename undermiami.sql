@@ -46,9 +46,9 @@ CREATE TABLE `artists` (
 
 INSERT INTO `artists` (`id`, `name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
 (1, 'Hometown Losers', 'Pop Punk', '5sjCP7vD1G4rVev1wolTci', 'https://www.facebook.com/hometownlosers/', 'Just a shitty punk band from the greater Miami area. William Ramirez(Vocals), Jose Posada(Guitar), Yardley Dominguez(Guitar), Alejandro Abad(Bass), JP Hernandez(Drums)', 'HTL.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09'),
-(2, 'Toptier', 'Pop-Punk', '0E4c3bUl6xhYUlc854FN8O', 'https://www.facebook.com/TopTierFL/', 'We are TopTier. An exciting four piece Pop-Punk band from Miami, FL. We throw in classic elements of the pop-punk sound mixed in brilliantly with a touch of hardcore & metal. We’ll bring a show that will surely have you on your feet, singing, clapping and jumping to our good vibe music. TopTier is: Bryant (B-ry) Perez(Drums), Christopher Tamez(Bass/Vocals), Charlie Naranjo(Lead Guitar), Felix Maldonado(Rhythm Guitar/Vocals)', 'TT.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09'),
+(2, 'Toptier', 'Pop-Punk', '0E4c3bUl6xhYUlc854FN8O', 'https://www.facebook.com/TopTierFL/', 'We are TopTier. An exciting four piece Pop-Punk band from Miami, FL. We throw in classic elements of the pop-punk sound mixed in brilliantly with a touch of hardcore & metal. Well bring a show that will surely have you on your feet, singing, clapping and jumping to our good vibe music. TopTier is: Bryant (B-ry) Perez(Drums), Christopher Tamez(Bass/Vocals), Charlie Naranjo(Lead Guitar), Felix Maldonado(Rhythm Guitar/Vocals)', 'TT.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09'),
 (3, 'Happy Hour', 'Post-Hardcore', '6vNQcK5GY7IHShnGWsS3iD', 'https://www.facebook.com/HHbandfl/', 'Experimental Post-Hardcore from South Florida. for fans of: Dance Gavin Dance, A Lot Like Birds, Hail The Sun, Sianvar, Good Tiger, and Secret Band. Nate Promkul(Vocals), Eric Hidalgo(Guitar/Vocals), Theodore William-Michael Senft(Guitar), Jacob Muniz(Bass), David Alfaro(Drums)', 'HH.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09'),
-(4, 'DJ Gio Andres', 'Tech House', NULL, 'https://djgioandres.com/', 'Miami native Gio Andres has created a name for himself as one of the youngest DJs on FM. His radio show “From Ibiza to Miami” aired for 2-years on Revolution 93.5 where Gio would showcase the best underground dance music from across the seas to his loyal listeners in Miami. Thanks to his passion for slanging his house and techno beats, he has performed at legendary Miami clubs such as Heart Nightclub, Shots Miami and Space Miami.', 'DJG.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
+(4, 'DJ Gio Andres', 'Tech House', NULL, 'https://djgioandres.com/', 'Miami native Gio Andres has created a name for himself as one of the youngest DJs on FM. His radio show "From Ibiza to Miami" aired for 2-years on Revolution 93.5 where Gio would showcase the best underground dance music from across the seas to his loyal listeners in Miami. Thanks to his passion for slanging his house and techno beats, he has performed at legendary Miami clubs such as Heart Nightclub, Shots Miami and Space Miami.', 'DJG.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE `graffiti` (
 --
 
 INSERT INTO `graffiti` (`id`, `name`, `artists_set`, `photo`, `lat`, `lon`, `created_at`, `updated_at`) VALUES
-(1, 'kissing', 'Alex Senna', 'KAS.png', 25.797681, -80.198914, '2017-09-30 14:52:21', '2017-09-30 14:52:21'),
+(1, 'kissing', 'Alex Senna', 'KAS.jpg', 25.797681, -80.198914, '2017-09-30 14:52:21', '2017-09-30 14:52:21'),
 (2, 'fire dog', 'A Squid Called Sebastian', 'FDSS.jpg', 25.796681, -80.198594, '2017-09-30 14:52:21', '2017-09-30 14:52:21'),
 (3, 'Eyes', 'Ahol Sniffs Glue', 'EASG.jpg', 25.798786, -80.198594, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
 
