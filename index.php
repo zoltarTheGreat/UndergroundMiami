@@ -1,7 +1,9 @@
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/modules/navbar.php'); ?>
 <div id="main" class="container">
-	<center><img src="UndergroundMiami2.png" alt="" height="400" width="600"><br><br></center>
+	<div class="">
+		<center><span id="header1">Miami</span><br><span id="header2">Underground</span></center><br>
+	</div>
   <p class="lead">See what's happening in Miami's underground</p>
   <p class="lead">
     <a href="/shows" class="btn btn-lg btn-lit">Upcoming shows and concerts</a>

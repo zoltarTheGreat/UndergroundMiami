@@ -2,6 +2,15 @@
  * Globals
  */
 
+@font-face {
+font-family: 'bonusF';
+src: url(/fonts/bonus_bling.ttf);
+}
+@font-face {
+font-family: 'bonusS';
+src: url(/fonts/bonus_shiny.ttf);
+}
+
 /* Links */
 a,
 a:focus,
@@ -170,6 +179,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+  overflow-y: scroll;
 }
 
 .spotify-icon{
@@ -180,4 +190,16 @@ body {
 }
 .venue-desc{
   font-style: italic;
+}
+#header1{
+  font-size: 160px!important;
+  font-family: 'bonusS';
+  color: #95cfff;
+  letter-spacing: 40px;
+}
+#header2{
+  font-size: 145px!important;
+  font-family: 'bonusF';
+  line-height: 0;
+  color: #FF6A99;
 }

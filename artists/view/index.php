@@ -25,7 +25,7 @@
 				echo '<br><b><img class="spotify-icon" src="/images/spotify.png"> <a href="https://open.spotify.com/artist/' . $value["spotify_id"] . '">View on Spotify</a></b>';
 			}
 			echo '<br><b><img class="facebook-icon" src="/images/facebook.png"> <a href="' . $value["links_set"] . '">View on Facebook</a></b><br>';
-			echo '</span></div></div></div>';
+			echo '</span></div></div></div><br>';
 
 		}
 	}
