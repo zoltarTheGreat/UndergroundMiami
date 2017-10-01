@@ -27,5 +27,6 @@ try {
 catch(PDOException $e)
 {
 	$dbstatus="failed, " . $e->getMessage();
+	// echo $dbstatus;
 }
 ?>
