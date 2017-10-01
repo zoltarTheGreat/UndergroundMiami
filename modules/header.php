@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/environment.php'); ?>
-<?php
-    require_once 'spotify.class.php';
-        
-    // Search for an artist by its name
-    $artist = Spotify::searchArtist('hometown losers');
-        
-    // Take a look at the response
-    echo '<pre>';
-    print_r($artist);
-    echo '<pre>';
-?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/spotify.php'); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -25,24 +15,6 @@
 	<body>
 
 <?php
-
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-        parent::__construct($it, self::LEAVES_ONLY);
-    }
-
-    function current() {
-        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
-    }
-
-    function beginChildren() {
-        echo "<tr>";
-    }
-
-    function endChildren() {
-        echo "</tr>" . "\n";
-    }
-} 
 
 $dbstatus="disconnected";
 
