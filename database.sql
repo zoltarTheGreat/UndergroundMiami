@@ -74,6 +74,8 @@ CREATE TABLE `graffiti`
   `name` text COLLATE utf8_unicode_ci,
   `artists_set` text COLLATE utf8_unicode_ci,
   `photo` longtext COLLATE utf8_unicode_ci NOT NULL,
+  'lat' double NOT NULL,
+  'lon' double NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON
 UPDATE CURRENT_TIMESTAMP
@@ -84,7 +86,7 @@ UPDATE CURRENT_TIMESTAMP
 --
 
 INSERT INTO `graffiti` (`id`,`name`, `artists_set`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'dfafds', 'dog', 'aaamoto.png', '2017-09-30 14:52:21', '2017-09-30 14:52:21');
+(1, 'dfafds', 'dog', 'aaamoto.png',0.0,0.0, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
 
 -- --------------------------------------------------------
 

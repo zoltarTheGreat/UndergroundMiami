@@ -26,19 +26,6 @@
 
     var map = new google.maps.Map(document.getElementById('map'),options);
 
-    // var infoWindow = new google.maps.InfoWindow({
-    //   content:'<h3>Churchhills Pub</h3>'
-    // });
-
-    // marker.addListener('click',function(){
-    //   infoWindow.open(map,marker);
-    // });
-
-    // addMarker({
-    //   lat: < ?php echo  ?>,
-    //   lon: < ?php echo  ?>
-    // })
-
     <?php
 	try {
 		$stmt = $conn->prepare("SELECT name,lat,lon,social_link FROM venues");
@@ -47,20 +34,16 @@
 		// set the resulting array to associative
 		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 		foreach ($stmt as $key => $value) {
-			echo 'var markprops = { coords:{lat: ' . $value["lat"] . ;
-			echo '<div class="outy"><div><span class="artist-info">';
-			echo '<center><b>' . $value["name"] . "</b></center><br>";
-			echo '</span></div></div>';
-			echo '<div class="inny" style="background-image:url(/images/venues/' . $value["image"] . ');"></div>';
-			echo '</div>';
-		}
-	
-	}
-
-
-
-      addMarker(coords:{lat: 25.7596208, lng:-80.37439180000001});
-      addMarker(coords:{lat: 26.2469165, lng:-80.20110239999997});
+			echo 'var markprops = { coords:{lat: ' . $value["lat"] . ', lng: ' . $value["lon"] . '}';
+      echo ', content: "<h3><a href="'. $value["social_link"] .'">' . $value["name"] . '</a></h3>" ';
+      echo 'addMarker(markprops)';
+    }
+  }
+    catch(PDOException $e) {
+      echo "Error: " . $e->getMessage();
+    }
+  
+?>
 
     //AddMarker Function
     function addMarker(props){
@@ -68,7 +51,14 @@
       position:props.coords,
       map:map
     });
-    }
+
+    var infoWindow = new google.maps.InfoWindow({
+      content:props.content
+    });
+
+    marker.addListener('click',function(){
+      infoWindow.open(map,marker);
+    });
   }
 </script>
 <script async defer
