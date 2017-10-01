@@ -6,5 +6,5 @@ $DATABASE_NAME="undermiami";          // Put the name of the database being used
 
 $DATABASE_USER="homestead";           // Put your database username here
 $DATABASE_PASSWORD="secret";          // Put your database password here
-$_ENV[$SPOTIFY_OAUTH]="BQAA8CvSnSro8HNxXzqgihJCjAbljDKu6vvQfPwpheD1I4rigVpcw2LvrsAZCYcLvTQgl279zEI0pzjWC-BZOLaL7doTDvYhUIMoTPx2N9uOC3xOxp486AOaFKJU_448N0KnF4Ry";           // Put your spotify OAuth token here
+$_ENV[$SPOTIFY_OAUTH]="BQBD2LvTyhn688eCGXiHkL7T7hVqoBLP_kYQx8slEUqVl2NKMp6TEbK2gpKaa5pcL4lcq68DVb4gs-IX9TmVCEY_kFKF4QO7ehCrREYcEyLhkxMiKWBj0g4n26xGIiOuOTeun8mS";           // Put your spotify OAuth token here
 ?>

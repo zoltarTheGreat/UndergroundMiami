@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/environment.php');
 
 class Spotify
 {
-	public function search($search, $item_type)
+	public static function search($search, $item_type)
 	{
 			//   search can be: any string
 			//item type can be: album, artist, track, playlist
@@ -37,7 +37,7 @@ class Spotify
 			return $resp;
 	}
 
-	public function topTracks($spotify_id, $amount)
+	public static function topTracks($spotify_id, $amount)
 	{
 			$curl = curl_init();
 			curl_setopt_array($curl, array(
@@ -59,10 +59,38 @@ class Spotify
 			}
 
 			for ($i=0; $i < $amount_of_top_songs; $i++) {
-				array_push($result , $json['tracks'][$i]["name"]);
+				array_push($result , '<a href="' . $json['tracks'][$i]["external_urls"]["spotify"] . '">' . $json['tracks'][$i]["name"] . '</a>');
 			}
 
 			return implode("<br class='break-songs'>", $result);
+	}
+
+	public static function getTopArt($spotify_id)
+	{
+			$curl = curl_init();
+			curl_setopt_array($curl, array(
+			    CURLOPT_RETURNTRANSFER => true,
+			    CURLOPT_URL => 'https://api.spotify.com/v1/artists/' . $spotify_id . '/top-tracks?country=US',
+			    CURLOPT_USERAGENT => 'curl',
+					CURLOPT_HTTPHEADER => ['Accept: application/json', 'Authorization: Bearer ' . $_ENV[$SPOTIFY_OAUTH]]
+			));
+			$resp = curl_exec($curl);
+			curl_close($curl);
+
+			$json = json_decode($resp, true);
+
+
+			if (!isset($amount) || !is_numeric($amount) || $amount > 9) {
+				$amount_of_top_songs = sizeof($json['tracks']);
+			} else {
+				$amount_of_top_songs = $amount;
+			}
+
+			if (!isset($json['tracks'][0]["album"]['images'][0]['url'])) {
+				return false;
+			}
+
+			return $json['tracks'][0]["album"]['images'][0]['url'];
 	}
 }
 

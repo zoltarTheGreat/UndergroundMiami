@@ -12,12 +12,12 @@
 			echo '<div class="artists float-left col-6 col-lg-4 card">';
 			echo '<div class="outy"><div><span class="artist-info">';
 			echo '<center><b>' . $value["name"] . "</b></center><br>";
-			if (isset($value["venue"]) && trim($value["venue"]) == "") {
+			if (isset($value["venue"]) && trim($value["venue"]) != "") {
 				echo '<b>Venue: </b>' . $value["venue"] . "<br>";
 			} else {
 				echo '<b>Venue: </b><a href="' . $value["links"] . '">Ask a punk,</a><br>';
-				echo '<a href="' . $value["links"] . '">' . $value["links"] . '</a>';
 			}
+			echo '<a href="' . $value["links"] . '">' . $value["links"] . '</a>';
 			echo '</span></div></div>';
 			echo '<div class="inny" style="background-image:url(/images/shows/' . $value["previewimage"] . ');"></div>';
 			echo '</div>';
