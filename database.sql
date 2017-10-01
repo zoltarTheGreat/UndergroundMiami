@@ -112,12 +112,13 @@ UPDATE CURRENT_TIMESTAMP
 INSERT INTO `shows` (`id`,`name`, `artists_set`, `venue`, `event_time`, `links`, `teaser`, `previewimage`, `created_at`, `updated_at`) VALUES
 (1, 'Oogie-Boogie @ The Fish House', 'Harvey,Stay For Tonight,Common Luck,Hometown Losers,TopTier,Happy Hour ', NULL, '2017-10-13 19:00:00', 'https://www.facebook.com/events/141867509746707/', 'Entrance is $7 if alone no costume $5 if youre in a costume ITS EP RELEASE TIME SONNNN Catch TopTier and Hometown Losers as they join forces to release their EPs at the same time! \r\n Lets pack this back room, invite your friends and family this is all ages!', 'OB@FH.jpg', '2017-09-30 15:41:25', '2017-09-30 15:41:25');
 INSERT INTO `shows` (`id`, `name`, `artists_set`, `venue`, `event_time`, `links`, `teaser`, `previewimage`, `created_at`, `updated_at`) VALUES
-(2, 'Rough Start EP Release, TopTier, Mascot, and more', 'TopTier, Mascot, One Last Embrace , Hometown Losers', 'OMalleys', '2017-10-08 19:00:00', 'https://www.facebook.com/events/483833228647577/ ', 'Event tickets at limitlessagency.comPresented by The Limitless Agency', 'RS@OM.jpg', '2017-09-30 15:41:25', '2017-09-30 15:41:25');
+(2, 'Rough Start EP Release, TopTier, Mascot, and more', 'TopTier, Mascot, One Last Embrace , Hometown Losers', 'OMalleys Sports Bar', '2017-10-08 19:00:00', 'https://www.facebook.com/events/483833228647577/ ', 'Event tickets at limitlessagency.comPresented by The Limitless Agency', 'RS@OM.jpg', '2017-09-30 15:41:25', '2017-09-30 15:41:25');
 INSERT INTO `shows` (`id`, `name`, `artists_set`, `venue`, `event_time`, `links`, `teaser`, `previewimage`, `created_at`, `updated_at`) VALUES
 (3, 'Hungover / Far Too Young / Top Tier / Common Luck / Odd Sweetheart', 'Hungover, Far Too Young, Top Tier, Common Luck , Odd Sweetheart', NULL , '2017-09-29 18:00:00', 'https://www.facebook.com/events/132267527413996/', 'Entrance is $5 Bringing the Hungover boys to the 305 for the second time!', 'FTY@HS.jpg', '2017-09-30 15:41:25', '2017-09-30 15:41:25');
 INSERT INTO `shows` (`id`, `name`, `artists_set`, `venue`, `event_time`, `links`, `teaser`, `previewimage`, `created_at`, `updated_at`) VALUES
 (4, 'Miami Jazz Jam & Theatre de Underground Open Mic', NULL, 'Churchhills Pub' , '2017-10-02 21:00:00', 'https://www.facebook.com/events/1902866149740447/', 'The Miami Jazz Jam is Miamis longest running jazz night. (Over 17 years!) This week features the Fernando Ulibarri group and surprise guests. Outback on the patio stage its Miamis most open minded open mic night, the Theatre de Underground hosted by Benjamin Shahoulian! Signup at 9pm. 18 and over only', 'MJJ@CH.jpg', '2017-09-30 15:41:25', '2017-09-30 15:41:25');
-
+INSERT INTO `shows` (`id`, `name`, `artists_set`, `venue`, `event_time`, `links`, `teaser`, `previewimage`, `created_at`, `updated_at`) VALUES
+(5, 'Weekly Open Mic Thurdays @ Vickeys FIU', NULL, 'Vickeys @FIU', '2017-10-05 21:00:00','https://www.facebook.com/events/1754094368251449/','Open mic event at Vickeys Bakery at FIU. Come early for sing up and enjoy a great night.','OM@VFIU.jpg','2017-09-30 15:41:25', '2017-09-30 15:41:25');
 
 -- --------------------------------------------------------
 
@@ -143,11 +144,13 @@ CREATE TABLE `venues` (
 --
 
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or
-use a
-car service like Uber or Lyft.', '
-http:
-//www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http: //www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
+(2, 'Vickeys @ FIU', 25.7596208, -80.37439180000001, '10975 SW 17th St, Miami, FL 33165', 'A Vickets Bakery on campus. Eat and chill. Good food and relazing enviornemnt.', 'https://shop.fiu.edu/restaurants/vickycafe/index.html', 'VFIU.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `desc`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
+(3, 'OMalleys Sports Bar', 26.2469165, -80.20110239999997, '1406 SR 7, Margate, FL 33063','Easygoing pub with TVs, hearty bar fare & many types of beer, plus pool, bands & karaoke nights.' , 'https://www.omalleyssportsbar.com/', 'OM.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+
+
 
 --
 -- Indexes for dumped tables
