@@ -62,7 +62,7 @@ class Spotify
 				array_push($result , $json['tracks'][$i]["name"]);
 			}
 
-			return implode("<br>", $result);
+			return implode("<br class='break-songs'>", $result);
 	}
 }
 

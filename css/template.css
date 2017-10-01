@@ -72,10 +72,6 @@ body {
   height: 400px;
 }
 
-.graffiti{
-
-}
-
 /*
  * Footer
  */
@@ -91,6 +87,59 @@ body {
   clear: both;
 }
 
+#main .card{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background: #222;
+  height: 300px;
+  border: 0;
+}
+
+#main .card>div{
+  height: 100%;
+  width: 100%;
+}
+
+#main .card .inny{
+  position: absolute;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#main .card .outy{
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  background: rgba(0,0,0,0.8);
+  left: 0;
+  transition: 0.4s;
+}
+.outy>div{
+  display: relative;
+  display: block;
+}
+.outy span.artist-info{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#main .card:hover .outy{
+  opacity: 1;
+}
+
+.break-songs{
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 767px)  {
   .lead .btn-lg{
     width: 100%;
@@ -101,15 +150,7 @@ body {
   .mastfoot{
     margin-top: 200px;
   }
-}
-
-#main .card{
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-  background: #222;
-}
-#main .card div{
-  width: 100%;
+  #main .card{
+    height: 150px;
+  }
 }
