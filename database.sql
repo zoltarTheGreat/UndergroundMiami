@@ -61,6 +61,9 @@ INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `
 (2, 'Toptier', 'Pop-Punk', '0E4c3bUl6xhYUlc854FN8O', 'https://www.facebook.com/TopTierFL/', 'We are TopTier. An exciting four piece Pop-Punk band from Miami, FL. We throw in classic elements of the pop-punk sound mixed in brilliantly with a touch of hardcore & metal. We’ll bring a show that will surely have you on your feet, singing, clapping and jumping to our good vibe music. TopTier is: Bryant (B-ry) Perez(Drums), Christopher Tamez(Bass/Vocals), Charlie Naranjo(Lead Guitar), Felix Maldonado(Rhythm Guitar/Vocals)', 'TT.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
 INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
 (3, 'Happy Hour', 'Post-Hardcore', '6vNQcK5GY7IHShnGWsS3iD','https://www.facebook.com/HHbandfl/', 'Experimental Post-Hardcore from South Florida. for fans of: Dance Gavin Dance, A Lot Like Birds, Hail The Sun, Sianvar, Good Tiger, and Secret Band. Nate Promkul(Vocals), Eric Hidalgo(Guitar/Vocals), Theodore William-Michael Senft(Guitar), Jacob Muniz(Bass), David Alfaro(Drums)','HH.jpg', '2017-09-30 14:52:21', '2017-09-30 14:55:09');
+INSERT INTO `artists` (`id`,`name`, `genre`, `spotify_id`, `links_set`, `bio`, `profile_pic`, `created_at`, `updated_at`) VALUES
+(4, 'DJ Gio Andres', 'Tech House', NULL, )
+
 
 -- --------------------------------------------------------
 --
@@ -86,7 +89,12 @@ UPDATE CURRENT_TIMESTAMP
 --
 
 INSERT INTO `graffiti` (`id`,`name`, `artists_set`,`photo`,`lat`,`lon`, `created_at`, `updated_at`) VALUES
-(1, 'dfafds', 'dog', 'aaamoto.png',0.0,0.0, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
+(1, 'kissing', 'Alex Senna', 'KAS.png',25.797681,-80.198914, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
+INSERT INTO `graffiti` (`id`,`name`, `artists_set`,`photo`,`lat`,`lon`, `created_at`, `updated_at`) VALUES
+(2, 'fire dog', 'A Squid Called Sebastian', 'FDSS.jpg',25.796681, -80.198594, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
+INSERT INTO `graffiti` (`id`,`name`, `artists_set`,`photo`,`lat`,`lon`, `created_at`, `updated_at`) VALUES
+(3, 'Eyes', 'Ahol Sniffs Glue', 'EASG.jpg',25.798786,-80.198594, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
+
 
 -- --------------------------------------------------------
 
@@ -149,7 +157,7 @@ CREATE TABLE `venues` (
 --
 
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http://www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Dont drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http://www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
 (2, 'Vickeys @ FIU', 25.7596208, -80.37439180000001, '10975 SW 17th St, Miami, FL 33165', 'A Vickets Bakery on campus. Eat and chill. Good food and relazing enviornemnt.', 'https://shop.fiu.edu/restaurants/vickycafe/index.html', 'VFIU.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES

@@ -42,7 +42,22 @@
     catch(PDOException $e) {
       echo "Error: " . $e->getMessage();
     }
-  
+
+  try {
+		$stmt = $conn->prepare("SELECT id,artists_set,photo,lat,lon FROM graffiti");
+		$stmt->execute();
+
+		// set the resulting array to associative
+		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+		foreach ($stmt as $key => $value) {
+			echo 'var markprops'.$value["id"].' = { coords:{lat: ' . $value["lat"] . ', lng: ' . $value["lon"] . '}';
+      echo ', content: \' <h3> ' . $value["artists_set"] . ' </h3><img src="/images/graffiti/'.$value["photo"].'">\' };';
+      echo 'addMarker(markprops'.$value["id"].');';
+    }
+  }
+    catch(PDOException $e) {
+      echo "Error: " . $e->getMessage();
+    }
 ?>
 
     //AddMarker Function
