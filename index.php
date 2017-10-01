@@ -28,15 +28,15 @@
 
     <?php
 	try {
-		$stmt = $conn->prepare("SELECT name,lat,lon,social_link FROM venues");
+		$stmt = $conn->prepare("SELECT id,name,lat,lon,social_link FROM venues");
 		$stmt->execute();
 
 		// set the resulting array to associative
 		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 		foreach ($stmt as $key => $value) {
-			echo 'var markprops = { coords:{lat: ' . $value["lat"] . ', lng: ' . $value["lon"] . '}';
-      echo ', content: "<h3><a href="'. $value["social_link"] .'">' . $value["name"] . '</a></h3>" ';
-      echo 'addMarker(markprops)';
+			echo 'var markprops'.$value["id"].' = { coords:{lat: ' . $value["lat"] . ', lng: ' . $value["lon"] . '}';
+      echo ', content: \'<h3><a href="' . $value["social_link"] . '">' . $value["name"] . '</a></h3>\'};';
+      echo 'addMarker(markprops'.$value["id"].');';
     }
   }
     catch(PDOException $e) {
@@ -59,7 +59,7 @@
     marker.addListener('click',function(){
       infoWindow.open(map,marker);
     });
-  }
+  }}
 </script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEO58rG00GZ1kep12O4Q5_cqQ5-jMkdvY&callback=initMap">

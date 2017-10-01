@@ -74,8 +74,8 @@ CREATE TABLE `graffiti`
   `name` text COLLATE utf8_unicode_ci,
   `artists_set` text COLLATE utf8_unicode_ci,
   `photo` longtext COLLATE utf8_unicode_ci NOT NULL,
-  'lat' double NOT NULL,
-  'lon' double NOT NULL,
+  `lat` double NOT NULL,
+  `lon` double NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON
 UPDATE CURRENT_TIMESTAMP
@@ -85,7 +85,7 @@ UPDATE CURRENT_TIMESTAMP
 -- Dumping data for table `graffiti`
 --
 
-INSERT INTO `graffiti` (`id`,`name`, `artists_set`, `photo`, `created_at`, `updated_at`) VALUES
+INSERT INTO `graffiti` (`id`,`name`, `artists_set`,`photo`,`lat`,`lon`, `created_at`, `updated_at`) VALUES
 (1, 'dfafds', 'dog', 'aaamoto.png',0.0,0.0, '2017-09-30 14:52:21', '2017-09-30 14:52:21');
 
 -- --------------------------------------------------------
@@ -149,7 +149,7 @@ CREATE TABLE `venues` (
 --
 
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http: //www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
+(1, 'Churchhills Pub', 25.8262506, -80.19170070000001, '5501 Northeast 2nd Avenue,Miami,FL,33127, Miami, FL 33127, United States', 'Since 1979 we have been your place for food, concerts, and sports! We are an 18 and over venue. Valid ID is required for entry. Outside drinks and food are not permitted. All bags are subject to search upon entry. Don’t drive drunk. Call a cab or use a car service like Uber or Lyft.', ' http://www.churchillspub.com/', 'CH.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
 (2, 'Vickeys @ FIU', 25.7596208, -80.37439180000001, '10975 SW 17th St, Miami, FL 33165', 'A Vickets Bakery on campus. Eat and chill. Good food and relazing enviornemnt.', 'https://shop.fiu.edu/restaurants/vickycafe/index.html', 'VFIU.jpg', '2017-09-30 15:16:35', '2017-09-30 15:16:35');
 INSERT INTO `venues` (`id`, `name`, `lat`, `lon`, `addr`, `description`, `social_link`, `image`, `created_at`, `updated_at`) VALUES
