@@ -3,7 +3,7 @@
 <div id="main" class="container">
 	<?php
 	try {
-		$stmt = $conn->prepare("SELECT name,addr,image,description FROM venues");
+		$stmt = $conn->prepare("SELECT name,addr,image,description,social_link FROM venues");
 		$stmt->execute();
 
 		// set the resulting array to associative
@@ -11,7 +11,7 @@
 		foreach ($stmt as $key => $value) {
 			echo '<div class="artists float-left col-6 col-lg-4 card">';
 			echo '<div class="outy"><div><span class="artist-info">';
-			echo '<center><b>' . $value["name"] . "</b></center><br>";
+			echo '<center><b><a href="'.$value["social_link"].'">' . $value["name"] . "</a></b></center><br>";
 			echo $value["addr"] . "<br><br>";
 			echo '<span class="venue-desc">' . $value["description"] . "</span><br>";
 			echo '</span></div></div>';

@@ -2,7 +2,7 @@
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/modules/navbar.php'); ?>
 <div id="main" class="container">
 	<div class="">
-		<center><span id="header1">Miami</span><br><span id="header2">Underground</span></center><br>
+		<center><span id="header2">Underground</span><br><span id="header1">Miami</span></center><br>
 	</div>
   <p class="lead">See what's happening in Miami's underground</p>
   <p class="lead">
@@ -13,7 +13,7 @@
 	<div id="map">
 		<style>
       #map{
-        height : 400px;
+        height : 600px;
         width: 100%;
       }
     </style>
@@ -22,7 +22,7 @@
 <script>
   function initMap(){
     var options = {
-      zoom: 8,
+      zoom: 10,
       center: {lat:25.7617,lng:-80.1918}
     }
 

@@ -196,10 +196,26 @@ body {
   font-family: 'bonusS';
   color: #95cfff;
   letter-spacing: 40px;
+  line-height: 0;
 }
 #header2{
   font-size: 145px!important;
   font-family: 'bonusF';
-  line-height: 0;
   color: #FF6A99;
+}
+#map h3 a,#map h3{
+  color: black!important;
+}
+#map h3 a{
+  text-decoration: underline;
+  color: darkblue!important;
+}
+
+#map .gm-style-iw img{
+  max-width: 80%;
+  max-height: 50%;
+}
+.nav-link{
+  font-family: 'bonusF';
+  font-size: 1.2em;
 }

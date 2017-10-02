@@ -11,7 +11,7 @@
 		foreach ($stmt as $key => $value) {
 			echo '<div class="artists float-left col-6 col-lg-4 card">';
 			echo '<div class="outy"><div><span class="artist-info">';
-			echo '<center><h5>' . $value["name"] . "</h5><br>";
+			echo '<center><h5>' . "</h5><br>";
 			echo 'by <b>' . $value["artists_set"] . "</b><br><br><br>";
 			echo '<h5><a href="/images/graffiti/' . $value["photo"] . '">Open photo</a></h5></center><br>';
 			echo '</span></div></div>';

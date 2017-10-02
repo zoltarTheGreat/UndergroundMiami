@@ -12,8 +12,8 @@
 			echo '<div class="artists float-left col-6 col-lg-4 card">';
 			echo '<div class="outy"><div><span class="artist-info">';
 			echo '<center><h5><a href="/artists/view/index.php?id='.$value["id"].'">' . $value["name"] . "</a></h5> </center>";
-			if (!isset($value["spotify_id"]) || trim($value["spotify_id"]) == "" || $value["spotify_id"] == -1 || $value["spotify_id"] == 0) {
-				echo '<center><i>Art</i></center><br>';
+			if (!isset($value["spotify_id"]) || trim($value["spotify_id"]) == "") {
+				echo '<center><i>Music</i></center><br>'; //IMPROV
 			} else {
 				echo '<center><i>Music</i></center><br>';
 				echo '<b>Top Song: </b>' . Spotify::topTracks($value["spotify_id"], 1) . "<br>";
