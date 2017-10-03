@@ -6,5 +6,5 @@ $DATABASE_NAME="undermiami"; // Put the name of the database being used here
 
 $DATABASE_USER="";           // Put your database username here
 $DATABASE_PASSWORD="";       // Put your database password here
-$_ENV[$SPOTIFY_OAUTH]="";           // Put your spotify OAuth token here
+$_ENV["SPOTIFY_OAUTH"]="";           // Put your spotify OAuth token here
 ?>

@@ -28,7 +28,7 @@ class Spotify
 			    CURLOPT_RETURNTRANSFER => true,
 			    CURLOPT_URL => 'https://api.spotify.com/v1/search?q=' . str_replace(' ', '+', $search) . '&type=' . $item_type,
 			    CURLOPT_USERAGENT => 'curl',
-					CURLOPT_HTTPHEADER => ['Accept: application/json','Authorization: Bearer ' . $SPOTIFY_OAUTH . '']
+					CURLOPT_HTTPHEADER => ['Accept: application/json','Authorization: Bearer ' . $_ENV["SPOTIFY_OAUTH"] . '']
 			));
 			// Send the request & save response to $resp
 			$resp = curl_exec($curl);
@@ -44,7 +44,7 @@ class Spotify
 			    CURLOPT_RETURNTRANSFER => true,
 			    CURLOPT_URL => 'https://api.spotify.com/v1/artists/' . $spotify_id . '/top-tracks?country=US',
 			    CURLOPT_USERAGENT => 'curl',
-					CURLOPT_HTTPHEADER => ['Accept: application/json', 'Authorization: Bearer ' . $_ENV[$SPOTIFY_OAUTH]]
+					CURLOPT_HTTPHEADER => ['Accept: application/json', 'Authorization: Bearer ' . $_ENV["SPOTIFY_OAUTH"]]
 			));
 			$resp = curl_exec($curl);
 			curl_close($curl);
@@ -72,7 +72,7 @@ class Spotify
 			    CURLOPT_RETURNTRANSFER => true,
 			    CURLOPT_URL => 'https://api.spotify.com/v1/artists/' . $spotify_id . '/top-tracks?country=US',
 			    CURLOPT_USERAGENT => 'curl',
-					CURLOPT_HTTPHEADER => ['Accept: application/json', 'Authorization: Bearer ' . $_ENV[$SPOTIFY_OAUTH]]
+					CURLOPT_HTTPHEADER => ['Accept: application/json', 'Authorization: Bearer ' . $_ENV["SPOTIFY_OAUTH"]]
 			));
 			$resp = curl_exec($curl);
 			curl_close($curl);
