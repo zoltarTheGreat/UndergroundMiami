@@ -28,7 +28,11 @@ class Spotify
 			    CURLOPT_RETURNTRANSFER => true,
 			    CURLOPT_URL => 'https://api.spotify.com/v1/search?q=' . str_replace(' ', '+', $search) . '&type=' . $item_type,
 			    CURLOPT_USERAGENT => 'curl',
+<<<<<<< HEAD
 					CURLOPT_HTTPHEADER => ['Accept: application/json','Authorization: Bearer ' . $_ENV["SPOTIFY_OAUTH"] . '']
+=======
+					CURLOPT_HTTPHEADER => ['Accept: application/json','Authorization: Bearer ' . "SPOTIFY_OAUTH" . '']
+>>>>>>> 5e18bf1d6350c4ff0dbf1173a65c7bca55c3cc41
 			));
 			// Send the request & save response to $resp
 			$resp = curl_exec($curl);
