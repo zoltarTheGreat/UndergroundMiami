@@ -16,7 +16,7 @@
 			echo '<div class="ollie-outy float-right col-12 col-lg-6 card" style="background-image:url(' . Spotify::getTopArt($value["spotify_id"]) . ')"><br>';
 			echo '<div><span>';
 			echo '<center><h3>' . $value["name"] . "</h3> </center><br>";
-			if (!isset($value["spotify_id"]) || trim($value["spotify_id"]) == "" || $value["spotify_id"] == -1 || $value["spotify_id"] == 0) {
+			if (!isset($value["spotify_id"]) || trim($value["spotify_id"])) {
 				echo '<h4>Biography: </h4>' . $value["bio"] . "<br><br>";
 			}else {
 				echo '<h4>Top Songs: </h4>' . Spotify::topTracks($value["spotify_id"], 3);
